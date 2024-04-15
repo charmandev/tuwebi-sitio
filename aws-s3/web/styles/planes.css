@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body{
+    width: 100%;
+    min-height: 100vh; /* Viewport Height */
+    background-image: linear-gradient(to right, #000214, #1000bf85);
+
+}
+
+
+.header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h3{
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 30px ; 
+    text-align: center;
+    margin-top:10px;
+}
+
+.Planes{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    justify-content: space-evenly;
+    align-items: ;
+}
+
+.planes1{
+    display: flex;
+    flex-direction: column;
+}
+
+.planBasico{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.planBasico h3{
+    font-size: 2rem;
+    color: #FF4FF3;
+}
+
+.planBasico p{
+    color: white;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.planBusiness{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.planBusiness h3{
+    font-size: 2rem;
+    color: #FF4FF3;
+}
+
+.planBusiness p{
+    color: white;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+
+
+.planes2{
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.planEstandar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.planEstandar h3{
+    font-size: 2rem;
+    color: #FF4FF3;
+}
+
+.planEstandar p{
+    color: white;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.planPersonalizado{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.planPersonalizado h3{
+    font-size: 2rem;
+    color: #FF4FF3;
+}
+
+.planPersonalizado p{
+    color: white;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+
+.botoncito{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+}
+
+.btn{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: #FF2EF8;
+    border: none;
+    border-radius: 3rem;
+    padding: .5rem 2rem;
+}

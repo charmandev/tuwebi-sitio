@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #281549;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+body{
+    width: 100%;
+    min-height: 100vh; /* Viewport Height */
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.header h3{
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 30px ; 
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.marcianosCards{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.marcianosCards img {
+    width: 15rem; /* Establece el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+
+
+
+.marcianosCards h3 {
+    font-size: 2rem;
+    color: #FF4FF3;
+}
+
+.marcianosCards p {
+    font-size: .8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    margin: 1rem;
+}
+
+.marcianosCards h4 {
+    font-size: 1.5rem;
+    color: #d4c707;
+}
+
+
