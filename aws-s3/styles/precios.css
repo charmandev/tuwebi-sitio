@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     background-color: #281549;
-    font-family: "Poppins", sans-serif;
+    font-family:sans-serif;
 
 }
 
@@ -24,6 +24,8 @@ body{
     font-size: 4rem;
     color: white;
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 30px ; 
+    font-weight: 400;    
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .main{
@@ -41,11 +43,13 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 3em;
+    
 }
 
 .marcianosCards img {
     width: 15rem; /* Establece el ancho de las imágenes */
     height: auto; /* Mantiene la proporción de las imágenes */
+
 }
 
 
@@ -54,19 +58,42 @@ body{
 .marcianosCards h3 {
     font-size: 2rem;
     color: #FF4FF3;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 10px;
 }
 
 .marcianosCards p {
-    font-size: .8rem;
-    font-weight: 800;
+    font-size: .9rem;
+    font-weight: 600;
     text-transform: uppercase;
     color: #f1f1f1;
     margin: 1rem;
 }
-
 .marcianosCards h4 {
     font-size: 1.5rem;
     color: #d4c707;
+    position: relative;
+    display: inline-block; /* O 'block' si el elemento debe ocupar toda la línea */
 }
+
+.marcianosCards h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Altura del subrayado */
+    background-color: #d4c707; /* Color del subrayado */
+    transform: scaleX(0); /* Inicia sin estar visible */
+    transition: transform 0.3s ease-in-out; /* Animación suave de aparición */
+}
+
+.marcianosCards h4:hover::after {
+    transform: scaleX(1); /* Aparece al pasar el mouse */
+}
+
+
+
 
 
