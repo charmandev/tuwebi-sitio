@@ -9,7 +9,7 @@ on:
 
 jobs:
   CI-testing:
-    name: call CI
+    name: Call CI
     uses: ./.github/workflows/CI.yml
     
   terraform:
