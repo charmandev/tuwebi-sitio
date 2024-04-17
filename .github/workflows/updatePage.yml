@@ -13,6 +13,7 @@ jobs:
     uses: ./.github/workflows/CI.yml
     
   terraform:
+    needs: CI-testing
     name: push web on s3
     runs-on: ubuntu-latest
     steps:
