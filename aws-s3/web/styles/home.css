@@ -16,7 +16,7 @@ html, body {
     overflow: hidden;
 }
 
-video#myVideo {
+/*video#myVideo {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -25,7 +25,9 @@ video#myVideo {
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1;
-}
+}*/
+
+
 
 
 .main {
