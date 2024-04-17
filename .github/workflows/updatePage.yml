@@ -8,6 +8,10 @@ on:
     branches: ["main"]
 
 jobs:
+  CI-testing:
+    name: call CI
+    uses: ./.github/workflows/CI.yml
+    
   terraform:
     name: push web on s3
     runs-on: ubuntu-latest
