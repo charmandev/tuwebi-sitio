@@ -45,6 +45,8 @@ jobs:
 
       - name: Save Terraform state
         run: |
+          git config --global user.email "julimax"
+          git config --global user.name "julimax951@gmail.com" 
           git add .
           git commit -m "Update Terraform state"
           git push origin main
