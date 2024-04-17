@@ -30,8 +30,7 @@ body{
     font-weight: 400;    
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-.Planes{
+.Planes {
     display: flex;
     width: 100%;
     height: auto;
@@ -41,128 +40,48 @@ body{
 
 @media (max-width: 767px) {
     .Planes {
-     
-      flex-direction: column; /* Cambio a layout vertical */
-      justify-content: center;
-      align-items: center;
-      padding: 20px; /* Agregar algo de padding para no tocar los bordes de la pantalla */
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
     }
-  }
+}
 
-.planes1{
+.planes1, .planes2 {
     display: flex;
     flex-direction: column;
     width: 80%;
     height: auto;
 }
 
-.planBasico{
+.planBasico, .planBusiness, .planEstandar, .planPersonalizado {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 3rem; /* Asegura que todos los planes tengan el mismo margen superior */
 }
 
-.planBasico h3{
+.planBasico h3, .planBusiness h3, .planEstandar h3, .planPersonalizado h3 {
     font-size: 150%;
     color: #FF4FF3;
-    background-color: black;
-    padding: 1rem;
-
     border-radius: 3rem;
     text-transform: uppercase;
     font-weight: 400;
+    margin: 0; /* Elimina cualquier margen por defecto */
 }
 
-.planBasico p{
+.planBasico p, .planBusiness p, .planEstandar p, .planPersonalizado p {
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     margin: 1rem;
     font-family: sans-serif;
-    font-weight: 500;
 }
 
-.planBusiness{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.planBusiness h3{
-    font-size: 150%;
-    color: #FF4FF3;
-    background-color: black;
-    padding: 1rem;
-
-    border-radius: 3rem;
-    text-transform: uppercase;
-    font-weight: 400;
-
-}
-
-.planBusiness p{
-    color: white;
-    margin: 1rem;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-
-
-.planes2{
-    display: flex;
-    flex-direction: column;
-
-    width: 80%;
-    height: auto;
-}
-
-.planEstandar{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.planEstandar h3{
-    font-size: 150%;
-    color: #FF4FF3;
-    background-color: black;
-    padding: 1rem;
-    border-radius: 3rem;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.planEstandar p{
-    color: white;
-    margin: 1rem;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-.planPersonalizado{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.planPersonalizado h3{
-    font-size: 150%;
-    color: #FF4FF3;
-    background-color: black;
-    padding: 1rem;
-
-    border-radius: 3rem;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.planPersonalizado p{
-    color: white;
-    margin: 1rem;
-    font-family: sans-serif;
-    font-weight: 500;
+/* Eliminar el margen superior del primer plan de cada columna */
+.planBasico:first-child, .planEstandar:first-child {
+    margin-top: 0;
 }
 
 
