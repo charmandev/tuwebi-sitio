@@ -1,9 +1,9 @@
-*{
+* {
     padding: 0;
     margin: 0;
     background-color: #281549;
-    font-family:sans-serif;
-
+    font-family: sans-serif;
+    box-sizing: border-box; /* Asegura que padding y border sean incluidos en el ancho/altura */
 }
 
 
@@ -34,6 +34,7 @@ html, body {
 .main{
     width: 100%;
     height: auto;
+    overflow: hidden;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -95,6 +96,89 @@ html, body {
 .marcianosCards h4:hover::after {
     transform: scaleX(1); 
 }
+
+
+
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.marcianosCards {
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #fff; /* Fondo blanco */
+    color: #281549; /* Texto en color principal de la página */
+    border: 2px solid #281549; /* Borde en color principal */
+    padding: 10px 20px;
+    font-size: 16px; /* Tamaño de texto adecuado */
+    border-radius: 30px; /* Bordes redondeados */
+    outline: none; /* Quitar el borde de foco predeterminado */
+    display: none; /* Ocultar inicialmente, se muestra en media query para móviles */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+}
+
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.carousel-control {
+    display: none; /* Ocultar inicialmente y se mostrará basado en media query */
+}
+
+@media (max-width: 767px) {
+    .carousel-control {
+        display: block; /* Mostrar los botones solo en pantallas móviles */
+    }
+}
+
+
+
+/* Estilos específicos para pantallas móviles */
+@media (max-width: 767px) {
+    .marcianosCards {
+        min-width: 100%; /* Cada tarjeta ocupa toda la anchura del contenedor en móviles */
+    }
+
+    .carousel-control {
+        display: block; /* Mostrar botones solo en móviles */
+    }
+}
+
+/* Estilos para pantallas mayores (desktop) */
+@media (min-width: 768px) {
+    .carousel-slider {
+        transform: none !important; /* Deshabilitar cualquier transformación */
+        flex-wrap: wrap; /* Permite que los elementos se ajusten según el espacio */
+    }
+    .marcianosCards {
+        flex: 1 1 auto; /* Permite que cada tarjeta se ajuste al tamaño del contenedor */
+    }
+}
+
+
 
 
 

@@ -11,3 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000); // Esperar la duración de la transición antes de mostrar el próximo slide
     }, 3000); // Cambiar cada 3 segundos
 });
+
+
+
+
+
