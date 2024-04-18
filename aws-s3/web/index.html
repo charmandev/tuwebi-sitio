@@ -8,6 +8,34 @@
     <link rel="icon"  href="./images/iconoVentana.png" type="image/png">
 </head>
 <body>
+
+    <nav class="nav">
+        <div class="logo">
+            <h2>TuWebi</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <!-- Botón del menú para dispositivos móviles -->
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div id="mobile-menu" class="overlay">
+            <a onclick="closeNav()" href="#" class="close">&times;</a>
+            <div class="overlay-content">
+                <ul>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Planes</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
    
     <div class="home">
          <iframe class="home" src="./bloques/home.html" frameborder="0"></iframe>
@@ -38,7 +66,10 @@
    </div>
 
    
+   <a href="https://api.whatsapp.com/send?phone=TUNUMERODETELEFONO" target="_blank" class="whatsapp-icon">
+    <img src="/tuWebi-sitio/aws-s3/web/images/iconoFlotanteWhatsapp.png" alt="Contacta con nosotros vía WhatsApp">
+</a>
 
-<script src="/js/index.js"></script>
+<script src="../web/javascript/navbar.js"></script>
 </body>
 </html>

@@ -83,12 +83,14 @@ body{
     height: auto;
     justify-content: center;
     align-items: center;
+    
 }
 
 
 .nave img{
     width: 25rem;
     height: auto;
+    border-radius: 3rem;
 }
 
 
