@@ -8,23 +8,29 @@
 
 html, body {
     height: 100%;
-    min-height: 100vh; /* Viewport Height */
+    min-height: 100vh; 
     
 }
 
 
-.nav{
+.nav {
     background-color: #000000;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 45px;
-    
-    width: 100%; 
-    }
-    
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000;
+}
+
+body {
+    padding-top: 45px; 
+}
     .main {
-    position: relative; /* Cambiamos a posición relativa */
+    position: relative;
     }
     
     .nav .logo{
@@ -51,30 +57,31 @@ html, body {
     
     .nav .nav-links li {
         display: inline-block;
-        padding: 0.5rem;
-        background-color: white;   /* Fondo blanco por defecto */
+        padding: 0.3rem;
+        margin-left:1rem ;
+        background-color: white; 
         border-radius: 3rem;
-        transition: background-color 0.5s, color 0.5s; /* Transición suave para cambios de fondo y color */
+        transition: background-color 0.5s, color 0.5s; 
     }
     
     .nav .nav-links a {
-        font-size: 16px; /* Asegúrate de especificar la unidad 'px' */
-        color: #000000; /* Color inicial del texto negro */
-        text-decoration: none; /* Quitamos subrayado de los enlaces */
-        transition: color 0.5s; /* Transición suave para cambios de color */
+        font-size: 16px;
+        color: #000000;
+        text-decoration: none; 
+        transition: color 0.5s; 
     }
     
     .nav .nav-links li:hover {
-        background-color: #1050a3; /* Cambio de fondo a violeta en hover */
+        background-color: #f2263c;
     }
     
     .nav .nav-links li:hover a {
-        color: #ffffff; /* Cambio de color de texto a blanco en hover */
+        color: #ffffff; 
     }
     
     
     .nav .nav-links a:hover {
-    color: #000; /* Color del texto al pasar el mouse (negro en este caso) */
+    color: #000;
     
     }
     
@@ -115,7 +122,6 @@ html, body {
     
     .nav a{
     text-decoration: none;  
-    /*borramos el que teniamos en .header .nav-links a*/ 
     }
     
     .nav .overlay {
@@ -196,26 +202,8 @@ html, body {
     }
 }
 
-.planes{
-    width: 100%;
-    height: 650px;
-    overflow: hidden;
-}
 
-@media (max-width: 767px) {
-    .planes {
-        width: 100%;
-        height: 1200px;
-    }
-}
-@media (min-width: 768px) {
-    .planes {
-        width: 100%;
-        height:650px;
-    }
-}
-
-.precios{
+.nosotros{
     width: 100%;
     height: 650px;
     overflow: hidden;
@@ -227,30 +215,17 @@ html, body {
     overflow: hidden;
 }
 
-.e-commerce{
-    width: 100%;
-    height: 650px;
-    overflow: hidden;
-}
-
-
-.nosotros{
-    width: 100%;
-    height: 650px;
-    overflow: hidden;
-}
-
 .whatsapp-icon {
-    position: fixed; /* Mantiene el icono en una posición fija en la pantalla */
-    right: 50px; /* Distancia desde el lado derecho de la pantalla */
-    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
-    z-index: 1000; /* Asegura que el ícono esté sobre otros elementos */
+    position: fixed; 
+    right: 50px; 
+    bottom: 20px; 
+    z-index: 1000; 
     filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6))
              drop-shadow(-5px -5px 5px rgba(0,0,0,0.6))
-             drop-shadow(0 0 15px rgba(0,0,0,0.8)); /* Tres capas de sombra para una mayor intensidad y contraste */
-    transition: transform .5s ease; /* Transición suave para el zoom */
+             drop-shadow(0 0 15px rgba(0,0,0,0.8)); 
+    transition: transform .5s ease; 
 }
 
 .whatsapp-icon:hover {
-    transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el mouse */
+    transform: scale(1.2); 
 }

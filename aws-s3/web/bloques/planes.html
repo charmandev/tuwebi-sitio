@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="../styles/planes.css">
 </head>
 <body>
+
+
+    
+    <nav class="nav">
+        <div class="logo">
+            <h2>TuWebi</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <!-- Botón del menú para dispositivos móviles -->
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div id="mobile-menu" class="overlay">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Planes</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </div>
+        </div>
+    </nav>
+
+   
     <header class="header">
         <h3>
             Paginas web estaticas
@@ -37,8 +65,23 @@
         </div>
     </main>
 
-    <div class="botoncito">
-        <button class="btn">Ver precios</button>
-    </div>
+
+
+
+
+    <div class="precios">
+        <iframe class="precios" src="../bloques/precios.html" frameborder="0"></iframe>
+       </div>
+    
+       <div class="e-commerce">
+        <iframe class="e-commerce" src="../bloques/e-commerce.html" frameborder="0"></iframe>
+       </div>
+
+       <div class="footer">
+        <iframe class="footer" src="../bloques/footer.html" frameborder="0"></iframe>
+       </div>
+    
+       <script src="../javascript/navbar.js"></script>
+
 </body>
 </html>
