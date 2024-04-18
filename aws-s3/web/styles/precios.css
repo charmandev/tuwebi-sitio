@@ -40,6 +40,9 @@ html, body {
     align-items: center;
 }
 
+
+
+
 .marcianosCards{
     display: flex;
     flex-direction: column;
@@ -104,17 +107,23 @@ html, body {
 .carousel-container {
     position: relative;
     overflow: hidden;
+    width: 100%; /* Establece el ancho del contenedor del carrusel */
+    max-width: 100vw; /* Asegura que el carrusel no exceda el ancho de la ventana */
 }
 
 .carousel-slider {
     display: flex;
     transition: transform 0.5s ease;
+    will-change: transform; /* Optimiza las animaciones de transformación */
 }
 
 .marcianosCards {
     box-sizing: border-box;
     padding: 20px;
+    width: 100%; /* Cada tarjeta ocupa todo el ancho en dispositivos móviles */
+    min-width: 300px; /* Establece un mínimo de anchura para cada tarjeta */
     text-align: center;
+    flex-shrink: 0; /* Evita que las tarjetas se reduzcan */
 }
 
 .carousel-control {
@@ -128,12 +137,15 @@ html, body {
     padding: 10px 20px;
     font-size: 16px; /* Tamaño de texto adecuado */
     border-radius: 30px; /* Bordes redondeados */
-    outline: none; /* Quitar el borde de foco predeterminado */
-    display: none; /* Ocultar inicialmente, se muestra en media query para móviles */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+    outline: none;
+    display: block; /* Asegura que los botones siempre sean visibles */
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
 }
 
-
+.carousel-control:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el mouse */
+}
 
 .prev {
     left: 10px;
@@ -144,39 +156,7 @@ html, body {
 }
 
 
-.carousel-control {
-    display: none; /* Ocultar inicialmente y se mostrará basado en media query */
-}
 
-@media (max-width: 767px) {
-    .carousel-control {
-        display: block; /* Mostrar los botones solo en pantallas móviles */
-    }
-}
-
-
-
-/* Estilos específicos para pantallas móviles */
-@media (max-width: 767px) {
-    .marcianosCards {
-        min-width: 100%; /* Cada tarjeta ocupa toda la anchura del contenedor en móviles */
-    }
-
-    .carousel-control {
-        display: block; /* Mostrar botones solo en móviles */
-    }
-}
-
-/* Estilos para pantallas mayores (desktop) */
-@media (min-width: 768px) {
-    .carousel-slider {
-        transform: none !important; /* Deshabilitar cualquier transformación */
-        flex-wrap: wrap; /* Permite que los elementos se ajusten según el espacio */
-    }
-    .marcianosCards {
-        flex: 1 1 auto; /* Permite que cada tarjeta se ajuste al tamaño del contenedor */
-    }
-}
 
 
 

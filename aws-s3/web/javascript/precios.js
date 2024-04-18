@@ -1,6 +1,3 @@
-
-//JAVASCRIPT PARA EL CARRUSEL
-
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.carousel-slider');
     const prevButton = document.querySelector('.prev');
@@ -9,13 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let autoPlayInterval;
 
-    function checkWindowSize() {
-        return window.innerWidth < 768;
-    }
-
     function updateButtonVisibility() {
-        prevButton.style.display = currentIndex > 0 && checkWindowSize() ? 'block' : 'none';
-        nextButton.style.display = currentIndex < slides.length - 1 && checkWindowSize() ? 'block' : 'none';
+        // Asegúrate de que los botones siempre estén visibles.
+        prevButton.style.display = currentIndex > 0 ? 'block' : 'none';
+        nextButton.style.display = currentIndex < slides.length - 1 ? 'block' : 'none';
     }
 
     function updateCarousel() {
@@ -57,20 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoPlay(); 
     });
 
-    window.addEventListener('resize', () => {
-        if (!checkWindowSize() && currentIndex !== 0) {
-            slider.style.transform = 'translateX(0)';
-            currentIndex = 0;
-        }
-        updateButtonVisibility();
-        startAutoPlay(); 
-    });
+    // Actualiza los botones inicialmente y cada vez que se cambia el tamaño de la ventana
+    window.addEventListener('resize', updateButtonVisibility);
 
     updateCarousel();
     startAutoPlay();
 });
-
-
-
-
-//JAVASCRIPT PARA LAS TARJETAS INVERTIDAS
