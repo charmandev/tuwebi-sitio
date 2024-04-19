@@ -209,6 +209,16 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 767px) {
+    .nosotros {
+        height: 1080px;
+    }
+}
+
+
+
+
+
 .contacto{
     width: 100%;
     height: 650px;
