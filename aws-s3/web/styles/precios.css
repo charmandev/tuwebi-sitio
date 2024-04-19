@@ -104,89 +104,66 @@ html, body {
 
 
 
+
+
+ /* CSS PARA EL CARRUSEL */
+
 .carousel-container {
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
-.carousel-slider {
+.carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
 }
 
 .marcianosCards {
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
+    flex: 0 0 100%; 
+    max-width: 100%;
 }
 
-.carousel-control {
+
+@media (min-width: 769px) { 
+    .carousel-inner {
+        flex-wrap: nowrap;
+        transform: none !important;
+    }
+    .marcianosCards {
+        flex: 0 0 33.333%;
+    }
+}
+
+
+
+
+ /* CSS DE BOTONES PARA EL CARRUSEL GOD */
+.carousel-control-prev, .carousel-control-next {
     position: absolute;
-    top: 50%;
+    top: 50%; 
     transform: translateY(-50%);
-    cursor: pointer;
-    background-color: #fff; /* Fondo blanco */
-    color: #281549; /* Texto en color principal de la página */
-    border: 2px solid #281549; /* Borde en color principal */
-    padding: 10px 20px;
-    font-size: 16px; /* Tamaño de texto adecuado */
-    border-radius: 30px; /* Bordes redondeados */
-    outline: none; /* Quitar el borde de foco predeterminado */
-    display: none; /* Ocultar inicialmente, se muestra en media query para móviles */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+    background-color: rgb(255, 255, 255); 
+    color: #d400f0; 
+    border: 1px solid #000000; 
+    border-radius: 5rem;
+    cursor: pointer; 
+    padding: 10px 15px; 
+    font-size: 24px; 
+    z-index: 100; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    opacity: 0.75; 
+    transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1); 
+}
 
-
-.prev {
+.carousel-control-prev {
     left: 10px;
 }
 
-.next {
+.carousel-control-next {
     right: 10px;
 }
-
-
-.carousel-control {
-    display: none; /* Ocultar inicialmente y se mostrará basado en media query */
-}
-
-@media (max-width: 767px) {
-    .carousel-control {
-        display: block; /* Mostrar los botones solo en pantallas móviles */
-    }
-}
-
-
-/* Estilos específicos para pantallas móviles */
-@media (max-width: 767px) {
-    .marcianosCards {
-        min-width: 100%; /* Cada tarjeta ocupa toda la anchura del contenedor en móviles */
-    }
-
-    .carousel-control {
-        display: block; /* Mostrar botones solo en móviles */
-    }
-}
-
-/* Estilos para pantallas mayores (desktop) */
-@media (min-width: 768px) {
-    .carousel-slider {
-        transform: none !important; /* Deshabilitar cualquier transformación */
-        flex-wrap: wrap; /* Permite que los elementos se ajusten según el espacio */
-    }
-    .marcianosCards {
-        flex: 1 1 auto; /* Permite que cada tarjeta se ajuste al tamaño del contenedor */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-

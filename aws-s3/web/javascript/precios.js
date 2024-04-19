@@ -1,59 +1,113 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.carousel-slider');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const slides = document.querySelectorAll('.marcianosCards');
-    let currentIndex = 0;
-    let autoPlayInterval;
-
-    function updateButtonVisibility() {
-        // Asegúrate de que los botones siempre estén visibles.
-        prevButton.style.display = currentIndex > 0 ? 'block' : 'none';
-        nextButton.style.display = currentIndex < slides.length - 1 ? 'block' : 'none';
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector('.carousel-inner');
+    const prevButton = document.querySelector('.carousel-control-prev');
+    const nextButton = document.querySelector('.carousel-control-next');
+    let startX, startTranslate, currentTranslate = 0;
 
     function updateCarousel() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        updateButtonVisibility();
+        container.style.transform = `translateX(${currentTranslate}px)`;
+        prevButton.style.display = currentTranslate < 0 ? 'block' : 'none';
+        nextButton.style.display = currentTranslate > -(container.offsetWidth * (container.children.length - 1)) ? 'block' : 'none';
     }
 
-    function moveToNextSlide() {
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; 
+    function initializeCarousel() {
+        if (!container.classList.contains('initialized')) {
+            container.classList.add('initialized');
+            addTouchEvents();
+            startAutoSlide();
         }
-        updateCarousel();
     }
 
-    function startAutoPlay() {
-        stopAutoPlay(); 
-        autoPlayInterval = setInterval(moveToNextSlide, 5000); 
-    }
+    function addTouchEvents() {
+        container.addEventListener('touchstart', (e) => {
+            stopAutoSlide();
+            startX = e.touches[0].clientX;
+            startTranslate = currentTranslate;
+        }, { passive: true });
 
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
+        container.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            const difference = touch.clientX - startX;
+            const translate = startTranslate + difference;
+            container.style.transform = `translateX(${translate}px)`;
+            e.preventDefault();
+        }, { passive: false });
+
+        container.addEventListener('touchend', (e) => {
+            const movedBy = startX - e.changedTouches[0].clientX;
+            if (movedBy > 50) {
+                currentTranslate -= container.offsetWidth;
+            } else if (movedBy < -50) {
+                currentTranslate += container.offsetWidth;
+            }
+            currentTranslate = Math.min(Math.max(currentTranslate, -container.offsetWidth * (container.children.length - 1)), 0);
+            updateCarousel();
+            startAutoSlide(); // Reiniciar la reproducción automática después de la interacción
+        });
     }
 
     prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
+        stopAutoSlide(); // Detener al hacer clic y luego actualizar
+        if (currentTranslate < 0) {
+            currentTranslate += container.offsetWidth;
             updateCarousel();
         }
-        startAutoPlay(); 
     });
 
     nextButton.addEventListener('click', () => {
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
+        stopAutoSlide(); // Detener al hacer clic y luego actualizar
+        const maxTranslate = -(container.offsetWidth * (container.children.length - 1));
+        if (currentTranslate > maxTranslate) {
+            currentTranslate -= container.offsetWidth;
             updateCarousel();
         }
-        startAutoPlay(); 
     });
 
-    // Actualiza los botones inicialmente y cada vez que se cambia el tamaño de la ventana
-    window.addEventListener('resize', updateButtonVisibility);
+    function disableCarousel() {
+        if (container.classList.contains('initialized')) {
+            container.classList.remove('initialized');
+            container.removeEventListener('touchstart', addTouchEvents);
+            container.removeEventListener('touchmove', addTouchEvents);
+            container.removeEventListener('touchend', addTouchEvents);
+            container.style.transform = 'none';
+            clearInterval(autoSlideInterval);
+        }
+    }
 
-    updateCarousel();
-    startAutoPlay();
+    function toggleCarousel() {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            prevButton.style.display = 'block';
+            nextButton.style.display = 'block';
+            initializeCarousel();
+        } else {
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            disableCarousel();
+        }
+    }
+
+    let autoSlideInterval = null;
+
+    function startAutoSlide() {
+        if (autoSlideInterval !== null) {
+            clearInterval(autoSlideInterval);
+        }
+        autoSlideInterval = setInterval(() => {
+            if (currentTranslate > -(container.offsetWidth * (container.children.length - 1))) {
+                currentTranslate -= container.offsetWidth;
+                updateCarousel();
+            } else {
+                currentTranslate = 0; // Reiniciar el carrusel al principio
+                updateCarousel();
+            }
+        }, 5000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide(); // Reiniciar el temporizador después de la interacción del usuario
+    }
+
+    toggleCarousel();
+    window.addEventListener('resize', toggleCarousel);
 });
