@@ -22,6 +22,19 @@ body {
   align-items: center;
 
 }
+@media (max-width: 767px) {
+  .contenidoFooter{
+    display: flex;
+    flex-direction: column; /* Cambio a layout vertical */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Agregar algo de padding para no tocar los bordes de la pantalla */
+  }
+}
+
+
+
+
 
 .numeroCelular {
   display: flex;
@@ -30,6 +43,17 @@ body {
   padding: .5rem;
 
 
+}
+
+
+
+@media (max-width: 767px) {
+  .numeroCelular{
+    display: flex;
+    flex-direction: row; /* Cambio a layout vertical */
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .numeroCelular h3 {
@@ -48,9 +72,18 @@ body {
   flex-direction: column;
   text-align: center;
   padding: .5rem;
-  
-
 }
+
+
+@media (max-width: 767px) {
+  .email{
+    display: flex;
+    flex-direction: row; /* Cambio a layout vertical */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 .email h3 {
   color: #ff4ff3;
@@ -68,6 +101,16 @@ body {
   padding: .5rem;
   
 }
+
+@media (max-width: 767px) {
+  .social{
+    display: flex;
+    flex-direction: row; /* Cambio a layout vertical */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 .social h3 {
   color: #ff4ff3;
