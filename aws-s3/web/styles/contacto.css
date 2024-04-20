@@ -25,20 +25,6 @@
 }
 
 
-.texto{
-    display: flex;
-    width: 50%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.texto p{
-    font-size: 1.5rem;
-    color: white;
-}
-
 
 .contactoFormulario{
     display: flex;
