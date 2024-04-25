@@ -4,7 +4,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     box-sizing: border-box; 
-    font-family: sans-serif;
+    font-family: "Arimo", sans-serif;
 }
 
 html, body {
@@ -17,19 +17,9 @@ html, body {
     overflow: hidden;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
 
-html, body {
-    height: 100%;
-    min-height: 100vh; 
-    
-}
+
+
 
 
 li {
@@ -40,10 +30,26 @@ a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+    position: relative;
 }
 
 a:hover {
     color: orange;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 header {
@@ -70,6 +76,25 @@ header {
 .navbar .links {
     display: flex;
     gap: 2rem;
+}
+
+.navbar .links a {
+    position: relative;
+}
+
+.navbar .links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .links a:hover::after {
+    width: 100%;
 }
 
 .navbar .toggle_btn {
@@ -171,7 +196,6 @@ header {
     }
 }
 
-
 video#myVideo {
     position: fixed;
     top: 50%;
@@ -212,9 +236,9 @@ video#myVideo {
     text-transform: uppercase;
     color: #FFFFFF; 
     margin: 10px;
-    font-weight:700;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-weight:bold;
+    font-family: "Arimo", sans-serif;
+    
 }
 @media (max-width: 767px) {
     .main h2 {
