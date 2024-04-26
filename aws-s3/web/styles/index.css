@@ -1,9 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Work Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    font-weight: 800;
+    background-color: black;
 }
 
 html, body {
@@ -20,65 +22,21 @@ html, body {
     height: 650px;
     overflow: hidden;
 }
+
 .main{
     width: 100%;
     height: 650px;
-    overflow: hidden;
 }
-
-@media (max-width: 767px) {
-    .main {
-        width: 100%;
-        height: 1650px;
-    }
-}
-@media (min-width: 768px) {
-    .main {
-        width: 100%;
-        height: 650px;
-    }
-}
-
 
 .nosotros{
     width: 100%;
     height: 650px;
-    overflow: hidden;
 }
 
-@media (max-width: 767px) {
-    .nosotros {
-        height: 1080px;
-    }
-}
-
-
-
-
-
-.contacto{
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
 
 .footer{
     width: 100%;
-    height: 150px;
-    overflow: hidden;
+    height: 100px;
 }
 
-.whatsapp-icon {
-    position: fixed; 
-    right: 50px; 
-    bottom: 20px; 
-    z-index: 1000; 
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6))
-             drop-shadow(-5px -5px 5px rgba(0,0,0,0.6))
-             drop-shadow(0 0 15px rgba(0,0,0,0.8)); 
-    transition: transform .5s ease; 
-}
 
-.whatsapp-icon:hover {
-    transform: scale(1.2); 
-}

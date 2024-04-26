@@ -4,7 +4,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     box-sizing: border-box; 
-    font-family: "Arimo", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 html, body {
@@ -16,11 +16,6 @@ html, body {
     align-items: center;
     overflow: hidden;
 }
-
-
-
-
-
 
 li {
     list-style: none;
@@ -78,23 +73,8 @@ header {
     gap: 2rem;
 }
 
-.navbar .links a {
-    position: relative;
-}
-
-.navbar .links a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: orange;
-    transition: width 0.3s ease-in-out;
-}
-
-.navbar .links a:hover::after {
-    width: 100%;
+.navbar .links li a {
+    text-decoration: none;
 }
 
 .navbar .toggle_btn {
@@ -119,6 +99,7 @@ header {
 
 .action_btn:hover {
     transform: scale(1.05);
+    color: black;
 }
 
 .action_btn:active {
@@ -207,9 +188,6 @@ video#myVideo {
     z-index: -1;
 }
 
-
-
-
 .main {
     width: 100%; 
     height: 100%; 
@@ -224,12 +202,8 @@ video#myVideo {
 @media (max-width: 767px) {
     .main {
         margin-top:2rem ;
-
     }
-  }
-
-
-
+}
 
 .main h2 {
     font-size: 6rem;
@@ -237,22 +211,20 @@ video#myVideo {
     color: #FFFFFF; 
     margin: 10px;
     font-weight:bold;
-    font-family: "Arimo", sans-serif;
-    
+    font-family: "Montserrat", sans-serif;
 }
+
 @media (max-width: 767px) {
     .main h2 {
-     font-size: 5rem;
+        font-size: 5rem;
     }
-  }
+}
 
-  @media (max-width: 400px) {
+@media (max-width: 400px) {
     .main h2 {
-     font-size: 4rem;
+        font-size: 4rem;
     }
-  }
-
-
+}
 
 .main h3 {
     font-size: 1.5rem;
@@ -263,16 +235,16 @@ video#myVideo {
     border-radius: 10px;
     border: solid rgba(62, 9, 206, 0.315) 3px;
     padding: .5rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     box-shadow: 15px 15px 0 rgba(85, 85, 85, 0.774);
 }
 
 @media (max-width: 767px) {
     .main h3 {
-     font-size: 1rem;
+        font-size: 1rem;
     }
-  }
+}
 
 .main .btn {
     padding: 10px 50px;
@@ -282,7 +254,7 @@ video#myVideo {
     color: rgb(0, 0, 0);
     margin: 30px;
     border: none;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     box-shadow: 5px 10px 0 rgba(39, 39, 39, 0.932);
     transition: transform 1s ease, background-color 1.4s ease, color 1.5s ease, box-shadow 1.3s ease;
 }
@@ -292,8 +264,4 @@ video#myVideo {
     background-color: #000000; 
     color: white; 
     box-shadow: 5px 10px 0 rgba(255, 255, 255, 0.932);
-
 }
-
-
-
