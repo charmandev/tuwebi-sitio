@@ -5,33 +5,18 @@ terraform {
         version = "3.4"
     }
   }
-/*
-    backend "s3" {
-    bucket = "my-terraform-state-webi-v1"
-    key    = "./terraform.tfstate"
-    region = "us-east-1"
-    dynamodb_table = "terraform-state"
-    encrypt = true
-  }
-  */
 }
 
 provider "aws" {
   region     = "us-east-1"
-}
-/*
-resource "aws_dynamodb_table" "terraform_state_lock" {
-  name           = "terraform-state"
-  hash_key       = "LockID"
-  read_capacity  = 5
-  write_capacity = 5
-
-  attribute {
-    name = "LockID"
-    type = "S"
+  backend "s3" {
+    bucket         = "tfstate-tar-testing-char"
+    dynamodb_table = "my-terraform-state-lock-auto-web-to-s3-test4"
+    key            = "environments/testing/aws-s3-bucket.tfstate"
+    region         = "us-east-1"
   }
 }
-*/
+
 resource "aws_s3_bucket" "bucket_web" {
   bucket = var.bucket_name
 
