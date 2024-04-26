@@ -5,16 +5,17 @@ terraform {
         version = "3.4"
     }
   }
-}
-
-provider "aws" {
-  region     = "us-east-1"
   backend "s3" {
     bucket         = "tfstate-tar-testing-char"
-    dynamodb_table = "my-terraform-state-lock-auto-web-${var.bucket_name}"
-    key            = "environments/testing/aws-s3-bucket.tfstate"
+    dynamodb_table = "my-terraform-state-lock-auto-web-$REPO"
+    key            = "environments/$REPO/aws-s3-bucket.tfstate"
     region         = "us-east-1"
   }
+}
+
+
+provider "aws" {
+  region = "us-east-1"
 }
 
 resource "aws_s3_bucket" "bucket_web" {
@@ -27,6 +28,7 @@ resource "aws_s3_bucket" "bucket_web" {
   website {
     index_document = "index.html"
   }
+
 }
 
 
