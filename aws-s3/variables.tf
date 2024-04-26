@@ -1,5 +1,4 @@
 variable "bucket_name" {
-  default = "tuwebi-site"
+  default = "$REPO"
 }
-
 
