@@ -79,23 +79,35 @@ body {
 
 @media only screen and (min-width: 701px) and (max-width: 767px) {
   .nosotros{
-    height: 1150px;
+    width: 100%;
+    height: 1050px;
 }}
 
 @media only screen and (min-width: 501px) and (max-width: 700px) {
   .nosotros{
-    height: 1100px;
+    width: 100%;
+
+    height: 960px;
 }}
 @media only screen and (min-width: 401px) and (max-width: 500px) {
   .nosotros{
+    width: 100%;
+
     height: 800px;
 }}
 
 
-/* Media queries para el bloque "main" */
-@media screen and (max-width: 400px) {
-    .nosotros{
-        height: 650px;
-    }
-}
+@media only screen and (min-width: 300px) and  (max-width: 399px) {
+  .nosotros{
+    width: 100%;
 
+    height: 600px;
+}}
+
+
+@media only screen and (max-width: 300px) {
+  .nosotros{
+    width: 100%;
+
+    height: 500px;
+}}
