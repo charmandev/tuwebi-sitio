@@ -103,3 +103,20 @@ body {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
+
+
+
+/* Estilos para las imágenes */
+.social img {
+  width: 40px; /* Tamaño original de las imágenes */
+  transition: filter .5s ease; /* Transición suave */
+}
+
+/* Cambiar el color al hacer hover */
+.social img:hover {
+  filter: grayscale(100%); /* Cambiar a escala de grises (70% de intensidad) */
+}
+
+.links{
+  text-decoration: none;
+}

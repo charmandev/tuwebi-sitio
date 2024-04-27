@@ -68,6 +68,17 @@ header {
     width: 150px;
 }
 
+
+.navbar .logo img {
+    border: none;
+    transition: transform 0.3s;
+  }
+  
+  .navbar .logo img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+  }
+
+
 .navbar .links {
     display: flex;
     gap: 2rem;
