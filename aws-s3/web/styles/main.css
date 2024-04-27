@@ -73,7 +73,7 @@ body {
     }
 
     .titulo-boton img{
-        width: 40rem;
+        width: 35rem;
     }
 }
 
@@ -83,7 +83,7 @@ body {
         font-size: 1rem;
     }
     .titulo-boton img{
-        width: 35rem;
+        width: 30rem;
 
     }
 }
@@ -101,19 +101,23 @@ body {
 }
 
 
-@media screen and (max-width: 326px) {
+@media screen and (max-width: 392px) {
     .btn {
         padding: 0.7rem 2rem;
         font-size: 1rem;
     }
     .titulo-boton img{
-        width: 20rem;
+        width: 16rem;
 
     }
 
     .stickers{
+        
         margin-top: 5rem;
+        width: 20rem;
+
     }
+   
 }
 
 
