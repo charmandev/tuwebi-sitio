@@ -1,22 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
 
-body{
-    background-color: #C9E265;
+body {
+    background-image: url(../images/fondoNuestrosServicios.png);
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
 }
 
-.titulo-boton{
+.titulo-boton {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;   
 }
+
+
+.titulo-boton img{
+    width: 40rem;
+    filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 0.836)); /* Aplica una sombra */
+
+}
+
 .btn {
     padding: 1rem 3rem;
     font-size: 1.5rem;
@@ -30,28 +40,95 @@ body{
     transform: scale(1.05);
 }
 
-  
-  .btn a {
+.btn a {
     text-decoration: none; /* Elimina el subrayado del enlace */
-  }
-  
+}
 
-.contenido-TB{
+.contenido-TB {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.stickers{
+.stickers {
     max-width: 100%; /* Añade esta línea para limitar el ancho */
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; /* Alinea la imagen de stickers en la parte inferior */
 }
 
-.stickers img{
+.stickers img {
     max-width: 100%; /* Ajusta el ancho máximo de la imagen */
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
     max-height: 100%; /* Añade esta línea para limitar la altura */
+}
+
+/* Media queries para hacer la página responsive */
+
+@media screen and (max-width: 768px) {
+    .btn {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .titulo-boton img{
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .btn {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+    .titulo-boton img{
+        width: 35rem;
+
+    }
+}
+
+
+@media screen and (max-width: 486px) {
+    .btn {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+    .titulo-boton img{
+        width: 25rem;
+
+    }
+}
+
+
+@media screen and (max-width: 326px) {
+    .btn {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+    .titulo-boton img{
+        width: 20rem;
+
+    }
+
+    .stickers{
+        margin-top: 5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 226px) {
+    .btn {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+    .titulo-boton img{
+        width: 15rem;
+
+    }
+
+    .stickers{
+        margin-top: 7rem;
+    }
 }

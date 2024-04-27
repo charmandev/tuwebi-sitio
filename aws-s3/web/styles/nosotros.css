@@ -57,3 +57,74 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 769px) {
+    .titulo-texto h3{
+        font-size: 10vw; /* Utiliza un tamaño de fuente relativo */
+        text-align: center; /* Alinea el texto al centro */
+        margin: 0; /* Elimina el margen del h3 */
+    }
+  
+    .imagen{
+        width: 100%;
+
+        align-items: center;
+    }
+    .imagen img{
+        width: 100%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+    .titulo-texto{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo-texto h3{
+        font-size: 20vw; /* Utiliza un tamaño de fuente relativo */
+        text-align: center; /* Alinea el texto al centro */
+        margin: 0; /* Elimina el margen del h3 */
+    }
+
+    .titulo-texto p {
+        font-size: 4vw; /* Utiliza un tamaño de fuente relativo */
+      
+    }
+    .imagen{
+        width: 100%;
+
+        align-items: start;
+    }
+    .imagen img{
+        width: 100%;
+    }
+
+}
+
+

@@ -1,42 +1,101 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 800;
-    background-color: black;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800;
+  background-color: black;
 }
 
-html, body {
-    height: 100%;
-    min-height: 100vh; 
-    
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.home {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 650px;
+}
+
+.nosotros {
+  width: 100%;
+  height: 650px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+}
+
+/* MEDIA QUERIES DE LOS BLOQUES*/
+
+
+/*media querie para main*/
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        height: 650px;
+      }
+}
+
+@media screen and (max-width: 568px) {
+    .main {
+        width: 100%;
+        height: 650px;
+      }
+}
+
+@media screen and (max-width: 486px) {
+    .main {
+        width: 100%;
+        height: 520px;
+      }
+}
+
+@media screen and (max-width: 326px) {
+    .main {
+        width: 100%;
+        height: 520px;
+      }
+}
+
+@media screen and (max-width: 226px) {
+    .main {
+        width: 100%;
+        height: 450px;
+      }
 }
 
 
+/*media querie para Nosotros*/
+
+@media only screen and (min-width: 701px) and (max-width: 767px) {
+  .nosotros{
+    height: 1150px;
+}}
+
+@media only screen and (min-width: 501px) and (max-width: 700px) {
+  .nosotros{
+    height: 1100px;
+}}
+@media only screen and (min-width: 401px) and (max-width: 500px) {
+  .nosotros{
+    height: 800px;
+}}
 
 
-.home{
-    width: 100%;
-    height: 650px;
-    overflow: hidden;
+/* Media queries para el bloque "main" */
+@media screen and (max-width: 400px) {
+    .nosotros{
+        height: 650px;
+    }
 }
-
-.main{
-    width: 100%;
-    height: 650px;
-}
-
-.nosotros{
-    width: 100%;
-    height: 650px;
-}
-
-
-.footer{
-    width: 100%;
-    height: 100px;
-}
-
 
