@@ -110,6 +110,7 @@ body{
         font-size: 19vw; /* Utiliza un tamaño de fuente relativo */
         text-align: center; /* Alinea el texto al centro */
         margin: 0; /* Elimina el margen del h3 */
+        margin-top: 5rem;
     }
 
     .titulo-texto p {
