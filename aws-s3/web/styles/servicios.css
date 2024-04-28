@@ -237,13 +237,13 @@ a:hover::after {
 
 @media screen and (max-width: 486px) {
   .main .titulo {
-    width: 15rem;
+    width: 20rem;
   }
 }
 
 @media screen and (max-width: 392px) {
   .main .titulo {
-    width: 10rem;
+    width: 20rem;
   }
 }
 
