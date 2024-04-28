@@ -88,3 +88,12 @@ body {
 .cajaPlanes h4:hover::before {
   width: 100%;
 }
+
+
+@media (max-width: 767px) {
+  .contenido-planes{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+}
