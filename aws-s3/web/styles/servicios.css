@@ -255,3 +255,12 @@ a:hover::after {
         height: 1200px;
     }
 }
+
+
+/*media querie para FOOTER*/
+
+@media only screen and (max-width: 767px) {
+  .footer{
+    height: 150px;
+}}
+
