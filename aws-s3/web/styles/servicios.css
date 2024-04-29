@@ -72,10 +72,11 @@ a:hover::after {
   align-items: center;
   justify-content: space-between;
 }
-
 .navbar .logo img {
-  width: 100px;
+  width: 80px;
+  filter: drop-shadow(6px 6px 12px rgb(112, 111, 111)); /* Drop shadow */
 }
+
 
 .navbar .links {
   display: flex;

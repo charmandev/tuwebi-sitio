@@ -71,8 +71,13 @@ header {
 .navbar .logo img {
     width: 150px;
     cursor: pointer;
-}
-
+    transition: transform 0.3s ease; /* Transición suave */
+  }
+  
+  .navbar .logo img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+  }
+  
 
 .navbar .logo img {
     border: none;
