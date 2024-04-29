@@ -70,6 +70,7 @@ header {
 
 .navbar .logo img {
     width: 150px;
+    cursor: pointer;
 }
 
 
