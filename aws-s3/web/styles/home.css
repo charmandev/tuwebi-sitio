@@ -228,7 +228,6 @@ video#myVideo {
     align-items: center;
     text-align: center; 
     flex-direction: column;
-    margin-top:5rem ;
 }
 
 @media (max-width: 767px) {
@@ -265,11 +264,9 @@ video#myVideo {
     background-color: #cacaca; 
     margin: 1rem;
     border-radius: 10px;
-    border: solid rgba(62, 9, 206, 0.315) 3px;
     padding: .5rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    box-shadow: 15px 15px 0 rgba(85, 85, 85, 0.774);
 }
 
 @media (max-width: 767px) {
@@ -297,3 +294,36 @@ video#myVideo {
     color: white; 
     box-shadow: 5px 10px 0 rgba(255, 255, 255, 0.932);
 }
+
+
+.mensaje-slide {
+    background-color: #cacaca; 
+    border-radius: 3rem;
+    margin-top: 2rem;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 10px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .mensaje-slide h3 {
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: slide-in-out 5s linear infinite;
+  }
+
+  @keyframes slide-in-out {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }

@@ -277,7 +277,7 @@ a:hover::after {
 @media screen and (max-width: 768px) {
 
     .planes {
-        height: 1200px;
+        height: 1300px;
     }
 }
 

@@ -41,7 +41,10 @@ body {
     background-color:#FEFAE0 ;
     border-radius: 2rem;
     text-align: center;
-}
+    box-shadow: 10px 10px 20px rgb(129, 127, 127);
+  }
+
+
 
 .planes h2{
     font-size: 16px;
@@ -55,7 +58,7 @@ body {
   font-weight: 100;
 }
 
-.cajaPlanes{
+.cajaPlanes {
   width: auto;
   height: auto;
   display: flex;
@@ -66,12 +69,14 @@ body {
 
 
 
+
 .cajaPlanes h4 {
   color: #B0B901;
   font-weight: 800;
   font-size: 24px;
   cursor: pointer;
   position: relative;
+  margin-top: 1rem;
 }
 
 .cajaPlanes h4::before {
@@ -95,5 +100,15 @@ body {
     width: 100%;
     height: auto;
     flex-direction: column;
+}
+
+.cajaPlanes{
+  margin-top: 3rem;
+}
+
+
+.contenido-planes{
+  
+  margin-top: 0;
 }
 }
