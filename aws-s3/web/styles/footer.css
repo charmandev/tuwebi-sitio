@@ -46,14 +46,18 @@ body {
 }
 
 .numeroCelular h3 {
-  color: #C9E265;
+  color: #c9e265;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  font-style: italic;
 
+  font-weight: bold;
 }
 
 .numeroCelular h4 {
   color: white;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .email {
@@ -61,6 +65,8 @@ body {
   flex-direction: column;
   text-align: center;
   padding: 0.5rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {
@@ -73,19 +79,24 @@ body {
 }
 
 .email h3 {
-  color: #C9E265;
+  color: #c9e265;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .email h4 {
   color: white;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .social {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {
@@ -99,17 +110,16 @@ body {
 
 .social h3 {
   text-align: center;
-  color: #C9E265;
+  color: #c9e265;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: bold;
 }
-
-
 
 /* Estilos para las imágenes */
 .social img {
   width: 40px; /* Tamaño original de las imágenes */
-  transition: filter .5s ease; /* Transición suave */
+  transition: filter 0.5s ease; /* Transición suave */
 }
 
 /* Cambiar el color al hacer hover */
@@ -117,6 +127,6 @@ body {
   filter: grayscale(100%); /* Cambiar a escala de grises (70% de intensidad) */
 }
 
-.links{
+.links {
   text-decoration: none;
 }

@@ -312,6 +312,8 @@ video#myVideo {
     padding: 0;
     opacity: 0;
     animation: slide-in-out 5s linear infinite;
+    font-style: italic;
+  font-weight: bold;
   }
 
   @keyframes slide-in-out {
