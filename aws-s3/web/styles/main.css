@@ -23,6 +23,7 @@ body {
 
 .titulo-boton img{
     width: 40rem;
+    margin-top: 2rem;
     filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 0.836)); /* Aplica una sombra */
 
 }
@@ -96,7 +97,18 @@ body {
     }
     .titulo-boton img{
         width: 25rem;
+        margin-top: 5rem;
 
+    }
+
+    .stickers{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stickers img{
+        width: 15rem;
+        margin-top: 4rem;
     }
 }
 
@@ -110,14 +122,15 @@ body {
         width: 16rem;
 
     }
-
     .stickers{
-        
-        margin-top: 5rem;
-        width: 20rem;
-
+        justify-content: center;
+        align-items: center;
     }
-   
+
+    .stickers img{
+        width: 10rem;
+        margin-top: 4rem;
+    }
 }
 
 
@@ -128,12 +141,17 @@ body {
         font-size: 1rem;
     }
     .titulo-boton img{
-        width: 15rem;
-
+        width: 10rem;
     }
 
     .stickers{
-        margin-top: 7rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stickers img{
+        width: 8rem;
+        margin-top: 4rem;
     }
 }
 
