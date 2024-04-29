@@ -159,6 +159,31 @@ a:hover::after {
   justify-content: center;
 }
 
+
+
+
+/* CSS para el menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #0000008f;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  color: white;
+  padding:1rem ;
+}
+
+.dropdown-menu li {
+  float: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
 @media (max-width: 992px) {
   .navbar .links,
   .navbar .action_btn {
