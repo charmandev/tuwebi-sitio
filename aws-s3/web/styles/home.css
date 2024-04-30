@@ -252,13 +252,20 @@ video#myVideo {
 
 @media (max-width: 767px) {
     .main h2 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 }
 
 @media (max-width: 400px) {
     .main h2 {
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 399px) {
+    .main h2 {
+        font-size: 2rem;
     }
 }
 
@@ -302,11 +309,11 @@ video#myVideo {
 
 
 .mensaje-slide {
-    background-color: #cacaca; 
+    background-color: #a3bb43; 
     border-radius: 3rem;
     margin-top: 2rem;
     transform: translateY(-50%);
-    color: #fff;
+    color: none;
     padding: 10px 20px;
     white-space: nowrap;
     overflow: hidden;
@@ -319,6 +326,8 @@ video#myVideo {
     animation: slide-in-out 5s linear infinite;
     font-style: italic;
   font-weight: bold;
+  background-color: #a3bb43; 
+
   }
 
   @keyframes slide-in-out {
