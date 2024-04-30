@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #111111;
-    overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+    overflow-x: hidden; 
 }
 
 .titulo {
@@ -27,7 +27,7 @@ body {
     text-transform: uppercase;
     color: burlywood;
     text-align: center;
-    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+    margin-right: 20px; 
 }
 
 .titulo img {
@@ -35,7 +35,7 @@ body {
 }
 
 .titulo {
-    animation: slideRight 12s linear infinite; /* Más lento */
+    animation: slideRight 12s linear infinite; 
 }
 
 @keyframes slideRight {
