@@ -9,7 +9,7 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 400px;
   min-height: auto;
   background-image: url(../images/fondoFooter.png);
   background-repeat: no-repeat;
@@ -36,7 +36,8 @@ body {
 }
 
 .partners img{
-  width: 16rem;
+  width: 10rem;
+  margin-top: 2rem;
 }
 
 @keyframes slide {
