@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/formulario.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/formulario.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Io-lYnPvgiHzNRh_d",
+        });
+      })();
+    </script>
+  </head>
+  <body>
     <div class="contenido">
-        <div class="formulario">
-            <h3>Contactanos</h3>
-            <div class="tuEmail">
-                <img src="../images/correo.png" alt="">
-                <h4>TuEmail:</h4>
-            </div>
-            <input class="emailInput" type="email">
-
-            <h4>Mensaje:</h4>
-            <input class="mensajeInput" type="text">
+      <div class="formulario">
+        <h3>Contactanos</h3>
+        <div class="tuEmail">
+          <img src="../images/correo.png" alt="" />
+          <h4>TuEmail:</h4>
         </div>
-     
-     
-        <div class="informacion">
-            <p>Si necesitas más información, detalles específicos o tienes <br> alguna consulta, no dudes en contactarte con nosotros. <br> 
-                Nuestro equipo está siempre disponible y atento para <br> responder a cualquier</p>
+        <input class="emailInput" type="email" id="email_id" />
 
-                <img src="../images/logoFormulario.png" alt="">
-            </div>
+        <h4>Mensaje:</h4>
+        <input class="mensajeInput" type="text" id="message" />
+        <button onclick="SendMail()">Enviar</button>
+      </div>
 
+      <div class="informacion">
+        <p>
+          Si necesitas más información, detalles específicos o tienes <br />
+          alguna consulta, no dudes en contactarte con nosotros. <br />
+          Nuestro equipo está siempre disponible y atento para <br />
+          responder a cualquier
+        </p>
+
+        <img src="../images/logoFormulario.png" alt="" />
+      </div>
     </div>
-</body>
+    <script src="../javascript/form.js"></script>
+  </body>
 </html>

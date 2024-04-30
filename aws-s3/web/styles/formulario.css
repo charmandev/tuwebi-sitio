@@ -57,6 +57,25 @@ body {
   margin-top: 1rem;
   font-style: italic;
 }
+.formulario button{
+  padding: .5rem 2rem;
+  background-color: antiquewhite;
+  color: black;
+  font-style: italic;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: black;
+  color: antiquewhite;
+}
+
+.formulario button:active {
+  background-color: #a3bb43;
+}
 
 .emailInput {
   margin-top: 1rem;
@@ -73,10 +92,12 @@ body {
   background-color: antiquewhite;
   border-radius: 1rem;
   border: none;
-  height: 150px;
   width: 300px;
+  height: 70px;
   align-items: start;
+  text-align: start;
 }
+
 
 .informacion {
   display: flex;
@@ -102,4 +123,68 @@ body {
   margin-top: 1rem;
   align-self: flex-end; /* Alinea la imagen al final del contenedor */
   margin-right: 2rem;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .contenido {
+    flex-direction: column-reverse;
+  }
+  
+  .formulario{
+    width: 100%;
+    height: auto;
+  }
+
+  .informacion{
+    width: 100%;
+    height: auto;
+  }
+  .informacion img{
+    width:3rem;
+  }
+}
+
+
+@media screen and (max-width: 399px) {
+  .informacion p{
+    font-size: 1rem;
+  }
+  .informacion img{
+    width: 3rem;
+  }
+}
+
+
+
+@media screen and (max-width: 336px) {
+
+  .formulario h3{
+    font-size:2rem;
+  }
+  .emailInput {
+    width: 200px;
+  }
+  
+  .mensajeInput {
+    width: 200px;
+    height: 70px;
+  }
+}
+
+
+@media screen and (max-width: 216px) {
+
+  .formulario h3{
+    font-size:1.5rem;
+  }
+  .emailInput {
+    width: 150px;
+  }
+  
+  .mensajeInput {
+    width: 150px;
+    height: 70px;
+  }
 }
