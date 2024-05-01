@@ -130,6 +130,7 @@ body {
 @media screen and (max-width: 767px) {
   .contenido {
     flex-direction: column-reverse;
+    
   }
   
   .formulario{
@@ -148,6 +149,11 @@ body {
 
 
 @media screen and (max-width: 399px) {
+  .contenido {
+ 
+    height: 90vh;
+  }
+  
   .informacion p{
     font-size: 1rem;
   }
@@ -174,8 +180,12 @@ body {
 }
 
 
-@media screen and (max-width: 216px) {
-
+@media screen and (max-width: 250px) {
+  .contenido {
+  
+    height: 100vh;
+  }
+  
   .formulario h3{
     font-size:1.5rem;
   }
