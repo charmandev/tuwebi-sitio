@@ -113,16 +113,7 @@ header {
     gap: 2rem;
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
 
 .navbar .links li {
     padding: 0.7rem;
@@ -130,6 +121,7 @@ header {
     align-items: center;
     justify-content: center;
     animation: slideIn 1.5s ease forwards;
+
 }
 
 
@@ -206,6 +198,7 @@ header {
     z-index: 1;
     color: white;
     padding:1rem ;
+    margin-top: 200px;
   }
   
   .dropdown-menu li {
@@ -257,7 +250,6 @@ header {
         width: unset;
     }
 }
-
 video#myVideo {
     position: fixed;
     top: 50%;
