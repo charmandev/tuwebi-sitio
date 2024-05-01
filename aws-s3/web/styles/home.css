@@ -73,6 +73,30 @@ header {
     cursor: pointer;
     transition: transform 0.3s ease; /* Transición suave */
   }
+
+
+  @keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar .logo img  {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 1.5s ease forwards;
+}
+
+
+
+
   
   .navbar .logo img:hover {
     transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
@@ -88,6 +112,26 @@ header {
     display: flex;
     gap: 2rem;
 }
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar .links li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 1.5s ease forwards;
+}
+
 
 .navbar .links li a {
     text-decoration: none;

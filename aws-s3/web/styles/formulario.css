@@ -135,7 +135,11 @@ body {
   
   .formulario{
     width: 100%;
-    height: auto;
+    height: 500px;
+  }
+
+  .formulario h3{
+    font-size: 2rem;
   }
 
   .informacion{
@@ -144,6 +148,9 @@ body {
   }
   .informacion img{
     width:3rem;
+  }
+  .informacion p{
+    font-size: 1rem;
   }
 }
 
