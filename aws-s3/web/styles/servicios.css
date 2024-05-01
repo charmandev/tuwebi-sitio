@@ -239,7 +239,7 @@ a:hover::after {
 
 .footer {
   width: 100%;
-  height: 360px;
+  height: 300px;
 }
 
 @media screen and (max-width: 768px) {
