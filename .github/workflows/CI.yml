@@ -8,16 +8,7 @@ jobs:
 
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v2
-
-      - name: Listar archivos
-        run: |
-          ls -l
-          cd aws-s3/web 
-          ls
-          
-      - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
               
       - name: Install dependencies
         run: npm install htmlhint -g
