@@ -56,6 +56,7 @@ body {
 
 .partners img {
   animation: slide 7s infinite;
+  
 }
 
 
@@ -204,4 +205,13 @@ body {
   .partners img{
     width: 15rem;
   }
+}
+
+
+
+
+
+.link {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Hereda el color del texto */
 }
