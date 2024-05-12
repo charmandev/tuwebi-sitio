@@ -1,5 +1,5 @@
 # TuWebi Proyecto
-
+ 
 ## Descripción del Proyecto
 **TuWebi Proyecto** es un proyecto enfocado en la creación de páginas web con planes de expandir a otras áreas relacionadas con el desarrollo tecnológico, como diseño de software y desarrollo de aplicaciones.
 Una idea a futuro seria la creacion de paginas web de manera autimatizada para garantizarnos tener muchos clientes, mayores ingresos y mas efectividad al momento de la creacion de paginas.
