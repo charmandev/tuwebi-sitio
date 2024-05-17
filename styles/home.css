@@ -68,40 +68,23 @@ header {
     justify-content: space-between;
 }
 
+
 .navbar .logo img {
     width: 150px;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Transición suave */
-  }
-
-
-  @keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.navbar .logo img  {
     padding: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: slideIn 1.5s ease forwards;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el mouse por encima */
 }
 
 
 
-
-  
-  .navbar .logo img:hover {
-    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
-  }
-  
 
 .navbar .logo img {
     border: none;
