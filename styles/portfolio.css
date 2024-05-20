@@ -1,53 +1,337 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    background-color: #1c1c1c;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #1c1c1c;
+  width: 100%;
+  height: 100vh;
 }
 
-.titulo{
-    width: 100%;
-    height: 100vh;
+.boton-enlace {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.boton-enlace img {
+  border: none;
+  transition: transform 0.3s;
+}
+
+.boton-enlace img:hover {
+  transform: scale(1.1);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+}
+
+a:hover {
+  color: orange;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.header1 {
+  width: 80%;
+  height: 60px;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar {
+  width: 90%;
+  height: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo img {
+  width: 80px;
+  filter: drop-shadow(6px 6px 12px rgb(112, 111, 111));
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .links a {
+  position: relative;
+}
+
+.navbar .links a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .links a:hover::after {
+  width: 100%;
+}
+
+.navbar .toggle_btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action_btn:hover {
+  transform: scale(1.05);
+}
+
+.action_btn:active {
+  transform: scale(0.95);
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 200px;
+  background-color: grey;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  display: block;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #0000008f;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: white;
+  padding: 1rem;
+}
+
+.dropdown-menu li {
+  float: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background-color: grey;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .dropdown_menu.open {
+    display: block;
+  }
+
+  .dropdown_menu li {
+    padding: 0.7rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-.titulo h1{
-    font-size:2rem;
-    color: bisque;
-    font-style: italic;
-    font-weight: bold;
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+.conteinerCartas {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20vh;
+  margin-top: 20vh;
 }
 
 
-.titulo img{
-  width: 30rem;
+
+.cartaDesplegable {
+  width: 250px;
+  height: 350px;
+  background-color: #7EA172;
+  position: relative;
+  transition: transform 0.8s, left 0.8s, top 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  margin-top: 5vh;
+  border-radius: 2vh;
+  margin-top: 5vh;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.678); /* sombra sólida blanca */
 }
 
 
-.btn {
-    padding: .5rem;
-    font-size: 1rem;
-    border-radius: 3rem;
-    background-color: #FEFAE0;
-    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    color: black;
-    border: none;
+
+.cartaDesplegable.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
 }
 
-.btn:hover {
-    transform: scale(1.05);
+
+
+.cartaDesplegable .front,
+.cartaDesplegable .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-top-left-radius: 25px; /* Ajusta el valor según lo necesites */
+  border-bottom-right-radius: 25px; /* Ajusta el valor según lo necesites */
 }
 
-.btn a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: black;
 
+.cartaDesplegable .front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartaDesplegable .front img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vh;
+  object-fit: cover;
+}
+
+.cartaDesplegable .back {
+  transform: rotateY(180deg);
+  background-color: #7EA172;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px; /* Mismo ancho que el lado frontal */
+  height: 350px; /* Mismo alto que el lado frontal */
+  border-radius: 2vh;
+  
+}
+
+.cartaDesplegable.flipped {
+  transform: rotateY(180deg);
+}
+
+button {
+  background-color: transparent;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 600;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  cursor: pointer;
+  margin-top: 5vh;
+}
+
+
+
+.footer {
+width: 100%;
+height: 100px;
+background-color: #3F292B;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.footer .logo{
+  width: 30vh;
+}
+
+.footer .contenido{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
