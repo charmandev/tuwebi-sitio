@@ -235,7 +235,7 @@ a:hover::after {
 .cartaDesplegable {
   width: 250px;
   height: 350px;
-  background-color: #7EA172;
+  background-color: #ebb589;
   position: relative;
   transition: transform 0.8s, left 0.8s, top 0.8s;
   transform-style: preserve-3d;
@@ -244,8 +244,12 @@ a:hover::after {
   border-radius: 2vh;
   margin-top: 5vh;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.678); /* sombra sólida blanca */
+  transition: 1.2s;
 }
 
+.cartaDesplegable:hover{
+  transform: scale(1.1);
+}
 
 
 .cartaDesplegable.centered {
@@ -284,7 +288,7 @@ a:hover::after {
 
 .cartaDesplegable .back {
   transform: rotateY(180deg);
-  background-color: #7EA172;
+  background-color: #a48fd4;
   display: flex;
   flex-direction: column;
   justify-content: center;
