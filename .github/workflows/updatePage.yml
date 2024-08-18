@@ -41,6 +41,7 @@ jobs:
       - name: Mover todos los files
         run: |
           cd ../temp
+          mkdir ../$REPO/aws-s3/web
           mv * ../$REPO/aws-s3/web/
 
       - name: Replace $REPO in main.tf
